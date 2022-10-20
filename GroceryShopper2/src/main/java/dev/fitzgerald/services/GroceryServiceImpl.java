@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -17,7 +18,9 @@ public class GroceryServiceImpl implements GroceryService {
 
     @Override
     public List<Grocery> getAllGroceries() {
-        return this.groceryRepo.findAll();
+        List<Grocery> results = new ArrayList<Grocery>();
+        this.groceryRepo.findAll().forEach(results::add);
+        return results;
     }
 
     @Override

@@ -26,13 +26,13 @@ public class Grocery {
     }
 
     public Long getId(){
-        return id;
+        return this.id;
     }
     public String getName(){
-        return name;
+        return this.name;
     }
     public Double getGroceryPrice(){
-        return groceryPrice;
+        return this.groceryPrice;
     }
 
     public void setId(Long groceryId) {
